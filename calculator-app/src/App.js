@@ -48,6 +48,8 @@ function handleEq(event){
 
         }
        }
+  }else{
+    numResult= parseFloat(resultText);
   }
   
     setResultText(numResult.toString())

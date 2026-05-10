@@ -100,6 +100,19 @@ color: black;
   z-index: 1;
   box-shadow: 5px 10px 10px #B5BFC6;
   font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+button:hover{
+  transform: translateY(-2px);
+  box-shadow: 5px 12px 14px rgba(181, 191, 198, 0.9);
+}
+
+button:active{
+  transform: translateY(1px);
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.2);
+  filter: brightness(0.95);
 }
 
 /*inserts content before the buttons text*/
@@ -118,7 +131,7 @@ button::before{
 z-index: -1;
 }
 
-  .reset-btn{
+.reset-btn{
     font-size: 16px;
     grid-area: clear;
     background: linear-gradient( rgba(242, 242, 242, 1), #ffe5ec );
@@ -157,6 +170,24 @@ z-index: -1;
     background: linear-gradient(90deg,#bde0fe,rgba(242, 242, 242, 1));
     border-bottom: 1px solid #a2d2ff;
   }
+
+  .reset-btn:hover,
+  .del-btn:hover,
+  .operation-btn:hover{
+    filter: brightness(1.05);
+  }
+
+  .eq-btn:hover{
+    filter: brightness(1.1);
+  }
+
+  .reset-btn:active,
+  .del-btn:active,
+  .operation-btn:active,
+  .eq-btn:active{
+    filter: brightness(0.93);
+  }
+
   h1{
 
   }
