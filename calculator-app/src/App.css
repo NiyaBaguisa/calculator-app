@@ -1,0 +1,177 @@
+::root{
+  --white-grey: rgba(242, 242, 242, 1);
+}
+body{
+  background-color:#e6e6e6;
+  text-align: center;
+}
+.calculator-container{
+  background-color: #ecedf0;
+  margin-top: 20%;
+  border-radius: 20px;
+  box-shadow: 5px 10px 10px #B5BFC6;
+
+}
+.result-container{
+  background-color: #3b3a3a;
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: inset 5px 5px 10px black;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  border-left: 5px solid #B5BFC6;
+  border-top: 5px solid #B5BFC6;
+  font-family: "Doto", sans-serif;
+}
+.buttons-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "clear clear delete divide"
+    "seven eight nine multi"
+    "four five six minus"
+    "one two three add"
+    "zero deci equals equals";
+}
+
+.toggle{
+  grid-area: toggle;
+}
+#decimal{
+  grid-area: deci;
+}
+#\+{
+  grid-area: add;
+}
+#\-{
+  grid-area: minus;
+}
+#\*{
+  grid-area: multi;
+}
+#\/{
+  grid-area: divide;
+}
+[id="0"]{
+  grid-area: zero;
+}
+#1{
+  grid-area: one;
+}
+#2{
+  grid-area: two;
+}
+#3{
+  grid-area: three;
+}
+#4{
+  grid-area: four;
+}
+#5{
+  grid-area: five;
+}
+#6{
+  grid-area: six;
+}
+#7{
+  grid-area: seven;
+}
+#8{
+  grid-area: eight;
+}
+#9{
+  grid-area: nine;
+}
+
+button{
+background: linear-gradient( rgba(242, 242, 242, 1), #B5BFC6 );
+  position:relative;
+color: black;
+  
+  height: 80px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 5px 10px 10px #B5BFC6;
+  font-size: 24px;
+}
+
+/*inserts content before the buttons text*/
+button::before{
+  content:'';
+  position:absolute;
+  top: 6px;
+  left: 8px;
+  bottom: 10px;
+  right: 8px;
+  background: linear-gradient(90deg,#B5BFC6,rgba(242, 242, 242, 1));
+  border-radius: 11px;
+  border-bottom: 1px solid #B5BFC6;
+  border-top: 1px solid white;
+  box-shadow: -10px -8px 8px rgba(255, 255, 255, 1);
+z-index: -1;
+}
+
+  .reset-btn{
+    font-size: 16px;
+    grid-area: clear;
+    background: linear-gradient( rgba(242, 242, 242, 1), #ffe5ec );
+
+  }
+  .reset-btn::before{
+        background: linear-gradient(90deg,#ffe5ec,rgba(242, 242, 242, 1));
+    border-bottom: 1px solid #ffc2d1;
+  }
+
+  .del-btn{
+    font-size: 18px;
+    grid-area: delete;
+    background: linear-gradient( rgba(242, 242, 242, 1), #ff8fab );
+
+
+  }
+  .del-btn::before{
+     background: linear-gradient(90deg, #ff8fab,rgba(242, 242, 242, 1));
+    border-bottom: 1px solid #fb6f92;
+  }
+   .eq-btn{
+   color: white;
+   grid-area: equals;
+   background: linear-gradient( rgba(0, 0, 0, 1), #222222 );
+   border: 1px solid #444;
+  }
+  .eq-btn::before{
+    background: linear-gradient(90deg, #222222, rgba(0, 0, 0, 1));
+    border-bottom: 1px solid #111;
+  }
+  .operation-btn{
+   background: linear-gradient( rgba(242, 242, 242, 1), #bde0fe );
+  }
+  .operation-btn::before{
+    background: linear-gradient(90deg,#bde0fe,rgba(242, 242, 242, 1));
+    border-bottom: 1px solid #a2d2ff;
+  }
+  h1{
+
+  }
+
+@media screen and (min-width: 576px) {
+  
+ body {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .calculator-container{
+    width: 500px;
+  
+  }
+}
